@@ -80,7 +80,7 @@ function RegComp() {
     <div className="w-full p-8">
       <div className="flex flex-col items-start">
         <h1 className="text-2xl font-bold">Company Details</h1>
-        <h2 className="text-lg text-gray-600">Provide your company's information below</h2>
+        <h2 className="text-lg text-gray-600">Provide information of your company</h2>
         <div className="w-full border-t border-gray-300 my-4"></div>
       </div>
       <Form {...form}>
@@ -209,7 +209,7 @@ function RegComp() {
                     <Input type="number" placeholder="e.g., 5000000" {...field} />
                   </FormControl>
                   <FormDescription>
-                    This is your company's budget.
+                    This is the budget of your company.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

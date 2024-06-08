@@ -58,7 +58,7 @@ const Dashboard: React.FC = () => {
     <div className="w-full p-8 overflow-hidden">
       <div className="flex flex-col items-start">
         <h1 className="text-2xl font-bold">Dashboard</h1>
-        <h2 className="text-lg text-gray-600">Overview of your company's data</h2>
+        <h2 className="text-lg text-gray-600">Overview of your company</h2>
         <div className="w-full border-t border-gray-300 my-4"></div>
       </div>
 
