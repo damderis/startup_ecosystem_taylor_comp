@@ -79,7 +79,7 @@ function PhaseBox({
                 </ul>
               </div>
               <div>
-                <h4 className="text-lg font-bold">KPI's & Metrics:</h4>
+                <h4 className="text-lg font-bold">KPIs & Metrics:</h4>
                 <ul className="list-disc list-inside">
                   {kpis.map((kpi, index) => (
                     <li key={index} className="ml-4">{kpi}</li>
