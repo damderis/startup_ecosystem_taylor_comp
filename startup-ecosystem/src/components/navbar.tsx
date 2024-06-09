@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { FolderKanban, LayoutDashboard, Handshake, Route, Building2, Settings, User, Info } from 'lucide-react';
+import { FolderKanban, LayoutDashboard, Handshake, Route, Building2, Settings, User, Info, BotMessageSquare } from 'lucide-react';
 import { usePathname } from "next/navigation";
 import { Tabs, Tab } from "@nextui-org/react";
 
@@ -76,7 +76,18 @@ const Navbar: React.FC = () => {
           }  
           href="/community" 
           className={pathname === "/community" ? "bg-gradient-to-r from-purple-800 to-purple-500 text-white" : ""}
-        /> 
+        />
+        <Tab 
+          key="/chatbot" 
+          title={
+            <div className="flex items-center gap-2">
+              <BotMessageSquare />
+              <span>Chatbot</span>
+            </div>
+          }  
+          href="/chatbot" 
+          className={pathname === "/chatbot" ? "bg-gradient-to-r from-purple-800 to-purple-500 text-white" : ""}
+        />  
       </Tabs>
       <Tabs
       aria-label="Options" 
@@ -84,7 +95,7 @@ const Navbar: React.FC = () => {
       isVertical={true} 
       color='secondary'
       variant="light"
-      className='px-4 py-32'
+      className='px-4 py-12'
       classNames={{
         tabList:"gap-6 w-full relative p-4",
         tab:"flex justify-start items-start p-2 rounded-md hover:bg-slate-100"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+
 type Grant = {
   grantName: string;
   agencyName: string;
@@ -97,11 +98,39 @@ const grants: Grant[] = [
   },
 ];
 
+const angelInvestors: Investor[] = [
+  {
+    name: 'John Woo',
+    type: 'Micro VC',
+    category: 'Angel Investor',
+    company: 'John Woo',
+    location: 'Kuala Lumpur, Malaysia',
+    pastInvestments: ['FREY', 'Cliently', 'Ettorney'],
+  },
+  {
+    name: 'Taraec Hussein',
+    type: 'Micro VC',
+    category: 'Angel Investor',
+    company: 'Taraec Hussein',
+    location: 'Kuala Lumpur, Malaysia',
+    pastInvestments: ['U-Parking', 'iPrice Group', 'Tripvisto'],
+  },
+  {
+    name: 'Herman Syah',
+    type: 'Angel/Individual',
+    category: 'Angel Investor',
+    company: 'Herman Syah',
+    location: 'Petaling Jaya, Malaysia',
+    pastInvestments: ['CreoPop', 'Plunify'],
+  },
+];
+
 const InvestorComponent: React.FC = () => {
   const categories = ['Angel Investor', 'Venture Capital'];
 
   const getTopInvestorsByCategory = (category: string): Investor[] => {
-    return investors
+    const allInvestors = [...investors, ...angelInvestors];
+    return allInvestors
       .filter((investor) => investor.category === category)
       .slice(0, 4);
   };

@@ -32,6 +32,7 @@ export default function RootLayout({
         </div>
         <div className="flex flex-col w-5/6 p-4">
         {children}
+        
         </div>
         </body>
     </html>
