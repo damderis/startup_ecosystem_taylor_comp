@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import axios from "axios"
-
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -39,6 +39,7 @@ const formSchema = z.object({
 })
 
 function RegComp() {
+
   // Initialize the form using useForm and zodResolver
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -294,7 +295,9 @@ function RegComp() {
             />
           </div>
           <div className="flex justify-end">
-            <Button type="submit" className="p-6 bg-gradient-to-r from-purple-800 to-purple-500 transform transition-transform duration-300 hover:scale-105 text-white">Submit</Button>
+            <Button className="p-6 bg-gradient-to-r from-purple-800 to-purple-500 transform transition-transform duration-300 hover:scale-105 text-white">
+            <Link href={"/investor"}>Submit</Link>
+            </Button>
           </div>
         </form>
       </Form>

@@ -151,7 +151,7 @@ const InvestorComponent: React.FC = () => {
                 <thead>
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Investor Name</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Affiliation</th>
+                    
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Past Investment</th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Get Connect</th>
@@ -161,7 +161,7 @@ const InvestorComponent: React.FC = () => {
                   {topInvestors.length > 0 ? (
                     topInvestors.map((investor, index) => (
                       <tr key={index}>
-                        <td className="px-6 py-4 whitespace-nowrap">{investor.name}</td>
+                        
                         <td className="px-6 py-4 whitespace-nowrap">{investor.company}</td>
                         <td className="px-6 py-4 whitespace-nowrap">{investor.location}</td>
                         <td className="px-6 py-4 whitespace-nowrap">
@@ -191,11 +191,11 @@ const InvestorComponent: React.FC = () => {
           <div className="min-w-full divide-y divide-gray-200">
             {funds.map((fund, index) => (
               <div key={index} className="mb-2">
-                <p className="font-bold">{fund.fundName}</p>
-                <p>Target Audience: {fund.targetAudience}</p>
-                <p>Purpose: {fund.purpose}</p>
-                <p>Financing Rate: {fund.financingRate}</p>
-                <p>Availability: {fund.availability}</p>
+                <p className="font-bold mt-2">{fund.fundName}</p>
+                <p className='p-2'>Target Audience: {fund.targetAudience}</p>
+                <p className='p-2'>Purpose: {fund.purpose}</p>
+                <p className='p-2'>Financing Rate: {fund.financingRate}</p>
+                <p className='p-2'>Availability: {fund.availability}</p>
               </div>
             ))}
           </div>
@@ -205,13 +205,13 @@ const InvestorComponent: React.FC = () => {
           <div className="min-w-full divide-y divide-gray-200">
             {grants.map((grant, index) => (
               <div key={index} className="mb-2">
-                <p className="font-bold">{grant.grantName}</p>
-                <p>{grant.agencyName}</p>
-                <p>Amount: {grant.amount}</p>
-                <p>Type: {grant.type}</p>
-                <p>Category: {grant.category}</p>
-                <p>Sector: {grant.sector}</p>
-                <Button className="p-4 bg-gradient-to-r from-purple-800 to-purple-500 transform transition-transform duration-300 hover:scale-105 text-white" asChild>
+                <p className="font-bold mt-2">{grant.grantName}</p>
+                <p className='p-2'>{grant.agencyName}</p>
+                <p className='p-2'>Amount: {grant.amount}</p>
+                <p className='p-2'>Type: {grant.type}</p>
+                <p className='p-2'>Category: {grant.category}</p>
+                <p className='p-2'>Sector: {grant.sector}</p>
+                <Button className="p-2 my-4 bg-gradient-to-r from-purple-800 to-purple-500 transform transition-transform duration-300 hover:scale-105 text-white" asChild>
                 <Link href={grant.learnMore}>Learn More</Link></Button>
               </div>
             ))}

@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <div className='fixed top-0 left-0 h-full bg-white z-10'>
+    <div className='fixed top-0 left-0 h-screen bg-white z-10'>
       <Tabs 
         aria-label="Options" 
         selectedKey={pathname} 
@@ -18,8 +18,8 @@ const Navbar: React.FC = () => {
         className='p-4'
         aria-checked={true}
         classNames={{
-            tabList:"gap-2 w-full relative p-4 ",
-            tab:"flex justify-start items-start p-4 rounded-md aria-checked:bg-gradient-to-r from-purple-800 to-purple-500 hover:bg-slate-100"
+            tabList:"gap-4 w-full relative p-4 ",
+            tab:"flex justify-start items-center p-6 rounded-md aria-checked:bg-gradient-to-r from-purple-800 to-purple-500 hover:bg-slate-100"
         }}
       >
         <Tab 
